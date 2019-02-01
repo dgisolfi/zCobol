@@ -10,4 +10,4 @@ The docker image can be built from the dockerfile using the make command in the 
 
 ## Usage
 
-to run the Portable Mainframe COBOL Compiler use the `zcobol` command in the container along with an argument for the file to be used.
+to run the Portable Mainframe COBOL Compiler use the `dos` command in the container along with an argument for the file to be used.
