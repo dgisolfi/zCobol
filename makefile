@@ -1,4 +1,4 @@
-# ZCOBOL
+# ZCOBOL Image
 # Author: Daniel Nicolas Gisolfi
 
 account=dgisolfi # Docker account
