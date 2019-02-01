@@ -17,13 +17,23 @@ WORKDIR /usr/local/lib/
 RUN wget http://www.sourceforge.net/projects/z390/files/z390_v1506/z390_v1506_files.zip
 RUN unzip z390_v1506_files.zip
 
+
+
 # Create a Sym Link to the perl script 
 # and give it executable mode
 WORKDIR /
+
+RUN rm /usr/local/lib/z390/dos.pl
+COPY ./src/dos.pl /usr/local/lib/z390/dos.pl
+
 RUN ln -s /usr/local/lib/z390/dos.pl /usr/local/bin/dos \
+    && chmod +x /usr/local/lib/z390/dos.pl \
     && chmod +x /usr/local/bin/dos
 
-RUN ln -s /usr/local/lib/z390/z390.pl /usr/local/bin/zcobol \
-    && chmod +x /usr/local/bin/zcobol
+RUN chmod +x /usr/local/lib/z390/cmd.pl \
+    && chmod +x /usr/local/lib/z390/z390.pl
+
+
+
 
 
